@@ -1,16 +1,16 @@
-const pg = require('pg')
+const pg = require("pg");
 
-let databaseName = 'react-gallery'
+let databaseName = "react-gallery";
 
-if (process.env.NODE_ENV === 'test') {
-  databaseName = 'prime_testing'
+if (process.env.NODE_ENV === "test") {
+  databaseName = "prime_testing";
 }
 
 const pool = new pg.Pool({
-    host: 'localhost',
-    port: 5432,
-    database: databaseName,
-    // allowExitOnIdle: true 
-})
+  host: "localhost",
+  port: 5432,
+  database: databaseName,
+  // allowExitOnIdle: true
+});
 
-module.exports = pool
+module.exports = pool;
